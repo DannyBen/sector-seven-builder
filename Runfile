@@ -23,6 +23,7 @@ action :b, :build do |args|
   build_css if all or args['--css']
   build_assets if all or args['--assets']
   build_js if all or args['--js']
+  build_repo_assets if all
 rescue => e
   say "!txtred!ERROR\n#{e.class} !txtpur!#{e.message}"
   say "in #{e.backtrace[0]}"
@@ -103,6 +104,9 @@ def build_js
   say "!txtgrn!done"
 end
 
+def build_repo_assets
+  copy_file 'README.md', "#{output_folder}/README.md"
+end
 
 action :debug do
   byebug
