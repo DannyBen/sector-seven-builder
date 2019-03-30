@@ -54,6 +54,14 @@ action :s, :server do
   run! "rackup -p 3000 -o 0.0.0.0"
 end
 
+help   "Deploy site by committing and pushing the site folder"
+action :d, :deploy do
+  say "deploying"
+  Dir.chdir 'site' do
+    run "git add . --all && git commit -am 'automatic deploy' && git push"
+  end
+end
+
 def build_html
   say "rendering html ... "
 

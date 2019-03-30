@@ -22,6 +22,6 @@ command line utility (already included in the download).
 ## Related Freeware Utilities
 
 For a drag and drop interface to encrypt any file, see
-**[File Blender](/software/file-blender)**
+**[File Blender](/software/fileblender)**
 which supports file encryption, audio conversion, video conversion and many
 other file processing functions.
