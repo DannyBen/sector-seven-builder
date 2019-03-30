@@ -103,6 +103,8 @@ def build_assets
   copy_asset "images"
   copy_asset "downloads"
   copy_asset "rpg-samples"
+  copy_asset "icons"
+  copy_file 'src/assets/icons/favicon.ico', "#{output_folder}/favicon.ico"
   say "!txtgrn!done"
 end
 

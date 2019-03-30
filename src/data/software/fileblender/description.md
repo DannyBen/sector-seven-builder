@@ -30,14 +30,14 @@ configured with these action packages:
 
 If you have created an action package that you think may interest others, or
 if you would like to see any other type of processing/conversion provided, 
-please [contact me](/contact).
+please [contact me](mailto:dannyb@sector-seven.com).
 
 ## File Blender in Your Language
 
 File Blender is available in these languages:  
 English French, Russian, German, Italian, Swedish, and Turkish 
 
-If you have translated File Blender to another language, please [let me know](/contact) and I will include your translation in a future release.
+If you have translated File Blender to another language, please [let me know](mailto:dannyb@sector-seven.com) and I will include your translation in a future release.
 
 ## Related Freeware Utilities
 
