@@ -37,5 +37,5 @@ For a quick start and introduction to what can be done with RPG, watch these tut
 * [Tutorial 5 - Multiple Instruments](/software/rpg/tutorials/rpg-5)
 * [Tutorial 6 - Multi-Track Stretch](/software/rpg/tutorials/rpg-6)
 * [Tutorial 7 - Scales and Chords](/software/rpg/tutorials/rpg-7)
-* [RPG Sessions - Gypsy Guitar](/software/rpg/rpg-gtutorials/uitar)
-* [RPG Sessions - Fantasy Gate](/software/rpg/rpgtutorials/-gate)
+* [RPG Sessions - Gypsy Guitar](/software/rpg/tutorials/rpg-guitar)
+* [RPG Sessions - Fantasy Gate](/software/rpg/tutorials/rpg-gate)
