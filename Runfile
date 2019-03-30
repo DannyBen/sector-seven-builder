@@ -68,6 +68,7 @@ def build_html
   softwares = Software.all
 
   render 'index', layout: 'default', output: 'index', softwares: softwares
+  render 'shared/redirect', output: 'software/index'
   
   softwares.each do |software|
     render 'software/show', layout: 'default', 
