@@ -1,0 +1,54 @@
+// Responsive N Column Grid System
+// Based on responsive.gs by Denis Leblanc (v2.0)
+// Source: https://github.com/DenisLeblanc/responsive.gs
+// Adapted to a multi-column SCSS by Danny Ben Shitrit
+
+// Config
+$breakpoint: 768px !default; 
+$rgs-cols: 12;
+$rgs-gutter: 2%;
+$rgs-row-bottom-margin: 0; // 0.25em;
+
+// Set all elements to box sizing
+*, *::before, *::after { box-sizing: border-box; }
+
+// Center container
+.container { margin: 0 auto; }
+
+// Clearfix
+.row:after, .col:after, .clr:after, .group:after { 
+	content: ""; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden; 
+}
+
+
+// Row
+.row { margin-bottom: $rgs-row-bottom-margin; } 
+.row.tight { margin-bottom: 0em; }
+							  
+// Column
+.col { 
+	display: block;
+	width: 100%;
+	float:left;
+}
+
+@media (min-width: $breakpoint) {
+	.col { margin-left: $rgs-gutter; }
+}
+
+// No margin for first column (implicit or explicit)
+.col:first-child, .col.first { margin-left: 0; }
+
+// Column width on large screens
+@media (min-width: $breakpoint) {
+	@for $i from 1 through $rgs-cols {
+		.span_#{$i}, .span-#{$i} { 
+			width: ($i/$rgs-cols*100) - ((1 - ($i/$rgs-cols)) * $rgs-gutter ) 
+		}
+	}
+}
+

@@ -1,0 +1,9 @@
+- @page_title = software.name
+
+= render 'software/_highlight', software: software
+
+.container
+  .row
+    .col.span-3.sidebar = render 'software/_sidebar', software: software
+    .col.span-9 = software.description
+

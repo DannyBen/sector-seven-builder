@@ -1,0 +1,33 @@
+header {
+  padding: 10px 0 8px;
+  background: $header-bg-color;
+  color: $header-fg-color;
+  margin-bottom: 0;
+  a {
+    font-size: 20px;
+    color: $color4;
+    display: block;
+    border-radius: $br;
+    &:hover, &:focus {
+      text-decoration: none;
+      background: lighten($color1, 15%);
+      color: white;
+    }
+  }  
+}
+
+.container {
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+#main {
+  padding-bottom: 100px
+}
+
+.sidebar {
+  margin-top: 22px;
+  a, button {
+    width: 100%;
+  }
+}

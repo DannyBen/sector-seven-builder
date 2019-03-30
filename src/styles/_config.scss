@@ -1,0 +1,23 @@
+// Customization
+// Predefine any of the marx variables here or other custom vars.
+// See marx/_variables.scss
+
+// coolors.co/04080f-dae3e5-507dbc-a1c6ea-bbd1ea
+$color1: hsla(218%, 58%, 4%, 1);
+$color2: hsla(191%, 17%, 88%, 1);
+$color3: hsla(215%, 45%, 53%, 1);
+$color4: hsla(210%, 63%, 77%, 1);
+$color5: hsla(212%, 53%, 83%, 1);
+
+// Custom
+
+$header-bg-color: $color1;
+$highlight-bg-color: $color2;
+$primary: $color3;
+$accent: $color4;
+
+
+$header-fg-color: white;
+$dividers: rgba(0, 0, 0, 0.1);
+
+

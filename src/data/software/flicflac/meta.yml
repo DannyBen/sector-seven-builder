@@ -1,0 +1,6 @@
+name: FlicFlac Audio Converter
+short_name: FlicFlac
+summary: Tiny Portable Audio Converter for WAV MP3 FLAC OGG and APE
+version: 1.03
+date: February 28, 2016
+github: DannyBen/FlicFlac

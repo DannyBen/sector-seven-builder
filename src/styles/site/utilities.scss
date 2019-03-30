@@ -1,0 +1,17 @@
+.align-right {
+  text-align: right;
+}
+
+.large {
+  font-size: ceil($font-size-base * 1.25);
+}
+
+.center {
+  text-align: center;
+}
+
+.one-line {
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}

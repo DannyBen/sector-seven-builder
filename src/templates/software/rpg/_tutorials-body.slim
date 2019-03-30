@@ -1,0 +1,12 @@
+markdown:
+  ## RPG Video Tutorials
+
+  These videos demonstrate how to create melodies in Renoise using 
+  [RPG](/software/rpg).
+
+= render 'shared/_youtube', code: selected['code'] if selected
+
+ul
+  - software.videos.each do |key, data|
+    li
+      a href="/software/rpg/tutorials/#{key}" = data['title']

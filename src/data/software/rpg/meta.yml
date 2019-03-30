@@ -1,0 +1,57 @@
+name: RPG - Renoise Phrase Generator
+short_name: RPG
+summary: Melody Generator for Renoise
+version: 0.80
+date: May 10, 2014
+samples:
+  multi-preset-1:       "Multiple RPG Presets (1)"
+  multi-preset-2:       "Multiple RPG Presets (2)"
+  from-rpg-tutorial-7:  "From RPG Turotial 7 Video"
+  from-rpg-tutorial-5:  "From RPG Turotial 5 Video"
+  from-rpg-session-1:   "From RPG Session 1 Video"
+  mld-twin-dance-1:     "RPG Preset: MLD Twin Dance (1)"
+  mld-twin-dance-2:     "RPG Preset: MLD Twin Dance (2)"
+  ld-new-dance-1:       "RPG Preset: LD New Dance"
+  mld-new-dance-1:      "RPG Preset: MLD New Dance"
+  mld-trance-sequence:  "RPG Preset: MLD Trance Sequence"
+  mld-trance-chords:    "RPG Preset: MLD Trance Chords"
+  mld-3-tracker-1:      "RPG Preset: MLD 3 Tracker"
+  mkey-dream-of-bass-1: "RPG Preset: MKEY Dream of Bass (1)"
+  mkey-dream-of-bass-2: "RPG Preset: MKEY Dream of Bass (2)"
+  ld-in-the-air-1:      "RPG Preset: LD In The Air"
+  ld-house-chords:      "RPG Preset: LD House Chords"
+  default-1:            "RPG Preset: Default (1)"
+  default-2:            "RPG Preset: Default (2)"
+  bas-basic-liner-1:    "RPG Preset: BAS Basic Liner (1)"
+  bas-basic-liner-2:    "RPG Preset: BAS Basic Liner (2)"
+
+videos:
+  rpg-1:
+    code: 6BKAVP0wst4
+    title: "RPG Tutorial 1 - Introduction"
+  rpg-2:
+    code: l2cJhmjstIU
+    title: "RPG Tutorial 2 - More Basics"
+  rpg-3:
+    code: 0ZXNKBsnWIE
+    title: "RPG Tutorial 3 - Duplicate and Panning"
+  rpg-4:
+    code: pP1_JSacM1M
+    title: "RPG Tutorial 4 - Step Sequencer"
+  rpg-5:
+    code: k3iy853Gt50
+    title: "RPG Tutorial 5 - Multiple Instruments"
+  rpg-6:
+    code: CeNC2Lw3TO4
+    title: "RPG Tutorial 6 - Multi-Track Stretch"
+  rpg-7:
+    code: x79xflolD-E
+    title: "RPG Tutorial 7 - Scales and Chords"
+  rpg-guitar:
+    code: 0VXzFEmDP-s
+    title: "RPG Session - Gypsy Guitar"
+  rpg-gate:
+    code: WdYfGVUPx30
+    title: "RPG Session - Fantasy Gate"
+
+

@@ -1,0 +1,14 @@
+// Mixins
+
+// mobile and desktop are the opposite of each other
+@mixin mobile {
+	@media (max-width: $breakpoint - 1) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: $breakpoint) {
+		@content;
+	}
+}

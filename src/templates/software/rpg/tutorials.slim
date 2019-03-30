@@ -1,0 +1,8 @@
+= render 'software/_highlight', software: software
+
+- @page_title = selected ? selected['title'] : 'RPG Video Tutorials'
+
+.container
+  .row
+    .col.span-3.sidebar = render 'software/_sidebar', software: software
+    .col.span-9 = render 'software/rpg/_tutorials-body', software: software, selected: selected

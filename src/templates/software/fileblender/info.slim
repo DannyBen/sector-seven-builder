@@ -1,0 +1,7 @@
+= render 'software/_highlight', software: software
+- @page_title = "File Blender Supported Actions"
+
+.container
+  .row
+    .col.span-3.sidebar = render 'software/_sidebar', software: software
+    .col.span-9 = render 'software/fileblender/_info-body'

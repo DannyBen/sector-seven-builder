@@ -1,0 +1,38 @@
+.box {
+  padding: 10px;
+  border: 1px solid $dividers;
+  border-radius: 5px;
+}
+
+.highlight {
+  background: $highlight-bg-color;
+  padding: 20px 0;
+  text-align: center;
+  h1 {
+    margin: 0;
+  }
+}
+
+button {
+  &.secondary {
+    background-color: white;
+    border-color: $primary;
+    color: $primary;
+  }
+}
+
+audio:focus {
+  outline: none;
+}
+
+.meta {
+  @extend section;
+
+  .label {
+    font-weight: bold;
+  }
+
+  .value {
+    display: inline-block;
+  }
+}

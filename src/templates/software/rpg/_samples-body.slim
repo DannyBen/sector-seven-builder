@@ -1,0 +1,9 @@
+markdown:
+  ## RPG Sound Samples</h1>
+  
+  These short loops were generated with 
+  [RPG](/software/rpg) (the drum tracks were added manually).
+
+- software.samples.each do |file, title|
+  audio controls='controls' src="/assets/rpg-samples/#{file}.mp3"
+  = title

@@ -1,0 +1,13 @@
+- @page_title = "Freeware for Windows"
+
+.highlight
+  .container
+    h1 = @page_title
+
+.container
+  - softwares.each_slice 3 do |row|
+    .row
+      - row.each do |software|
+        .card.col.span-4
+          h3: a href="/software/#{software.id}" = software.short_name
+          p = software.summary

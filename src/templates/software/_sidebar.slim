@@ -1,0 +1,23 @@
+section
+  a href="#{software.download}"
+    button.large
+      i.fas.fa-download>
+      | Download
+
+- if software.screenshot
+  section.screenshot: img src=software.screenshot
+
+section
+  .meta
+    .label Version
+    .value = software.version
+  .meta
+    .label Last Release
+    .value = software.date
+  - if software.github
+    .meta.one-line
+      .label Source
+      .value
+        i.fab.fa-github>
+        a href="https://github.com/#{software.github}"
+          = software.github
