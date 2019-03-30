@@ -1,1 +1,0 @@
-Wallpaper Randomizer is a small system tray wallpaper changer.
