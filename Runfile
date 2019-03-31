@@ -106,6 +106,7 @@ def build_assets
   copy_asset "rpg-samples"
   copy_asset "icons"
   copy_file 'src/assets/icons/favicon.ico', "#{output_folder}/favicon.ico"
+  copy_file 'src/assets/_redirects', "#{output_folder}/_redirects"
   say "!txtgrn!done"
 end
 
