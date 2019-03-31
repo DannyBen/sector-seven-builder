@@ -2,6 +2,7 @@
 
 # Redirect domain aliases to primary domain
 https://sector-seven.net/* https://sector-seven.com/:splat 301!
+https://dannybens.com/* https://sector-seven.com/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
 # https://naughty-swirles-9239c7.netlify.com/* https://sector-seven.com/:splat 301!
