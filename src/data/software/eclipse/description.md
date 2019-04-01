@@ -1,7 +1,7 @@
 ## Overview
 
-Send encrypted emails and encrypt any text in place using this simple and 
-portable tool.
+Eclipse is a portable system tray application that lets you send encrypted 
+emails and encrypt any text in place. 
 
 ## How it Works
 

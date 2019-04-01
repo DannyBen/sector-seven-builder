@@ -11,17 +11,19 @@ root_folder 'src'
 markdown_folder 'src/data'
 scss_options cache: true, syntax: :scss, style: :compressed
 
-usage  "(b|build) [-HCJA]"
+usage  "(b|build) [-HCJSA]"
 help   "Generate the site or parts of it"
 option "-H, --html", "Build HTML only"
 option "-C, --css", "Build CSS only"
-option "-A, --assets", "Build assets only"
+option "-A, --assets", "Copy assets only"
+option "-S, --software", "Copy software only"
 option "-J, --js", "Build javascripts only"
 action :b, :build do |args|
-  all = !(args['--html'] or args['--css'] or args['--assets'] or args['--js'])
+  all = !(args['--html'] or args['--css'] or args['--assets'] or args['--js'] or args['--software'])
   build_html if all or args['--html']
   build_css if all or args['--css']
   build_assets if all or args['--assets']
+  build_software if all or args['--software']
   build_js if all or args['--js']
   build_repo_assets if all
 rescue => e
@@ -102,10 +104,15 @@ end
 def build_assets
   say "copying assets ... "
   copy_asset "images"
-  copy_asset "downloads"
-  copy_asset "rpg-samples"
   copy_asset "icons"
   copy_folder 'src/assets/root', output_folder
+  say "!txtgrn!done"
+end
+
+def build_software
+  say "copying software ... "
+  copy_asset "downloads"
+  copy_asset "rpg-samples"
   say "!txtgrn!done"
 end
 
