@@ -1,13 +1,22 @@
 - @page_title = "Freeware for Windows"
 
-.highlight
-  .container
-    h1 = @page_title
+/ .highlight
+/   .container
+/     h1 = @page_title
 
 .container
-  - softwares.each_slice 3 do |row|
-    .row
-      - row.each do |software|
-        .card.col.span-4
-          h3: a href="/software/#{software.id}" = software.short_name
-          p = software.summary
+  .row
+    .col.span-8
+      h2 Freeware for Windows
+      - softwares.each_slice 2 do |row|
+        .row
+          - row.each do |software|
+            .card.col.span-6
+              h3: a href="/software/#{software.id}" = software.short_name
+              p = software.summary
+
+    .col.span-4
+      h2 Trailer Punk
+      p Watch trailers for the latest and most wanted films.
+      a href="https://trailerpunk.com"
+        img src='/assets/images/screenshots/punk.png'
