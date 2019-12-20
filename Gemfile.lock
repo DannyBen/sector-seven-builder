@@ -1,42 +1,43 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    adsf (1.4.2)
+    adsf (1.4.3)
       rack (>= 1.0.0, < 3.0.0)
-    bobkit (0.1.8)
+    bobkit (0.1.9)
       coffee-script (~> 2.4)
-      filewatcher (~> 1.0)
-      i18n (~> 1.0)
+      filewatcher (~> 1.1)
+      i18n (~> 1.7)
+      mini_racer (~> 0.2)
       rdiscount (~> 2.2)
-      sass (~> 3.5)
+      sass (~> 3.7)
       sass-globbing (~> 1.1)
-      slim (~> 3.0)
-      therubyracer (~> 0.12)
+      slim (~> 4.0)
     byebug (11.0.1)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    colsole (0.5.4)
+    colsole (0.6.0)
     concurrent-ruby (1.1.5)
     docopt (0.6.1)
     execjs (2.7.0)
-    ffi (1.11.1)
+    ffi (1.11.3)
     filewatcher (1.1.1)
       optimist (~> 3.0)
-    i18n (1.6.0)
+    i18n (1.7.0)
       concurrent-ruby (~> 1.0)
-    libv8 (3.16.14.19)
-    nio4r (2.4.0)
+    libv8 (7.3.492.27.1)
+    mini_racer (0.2.8)
+      libv8 (>= 6.9.411)
+    nio4r (2.5.2)
     optimist (3.0.0)
-    puma (4.1.0)
+    puma (4.3.1)
       nio4r (~> 2.0)
-    rack (2.0.7)
+    rack (2.0.8)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     rdiscount (2.2.0.1)
-    ref (2.0.0)
     runfile (0.11.0)
       colsole (~> 0.5)
       docopt (~> 0.5)
@@ -47,15 +48,12 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    slim (3.0.9)
+    slim (4.0.1)
       temple (>= 0.7.6, < 0.9)
-      tilt (>= 1.3.3, < 2.1)
-    sting (0.2.0)
-    temple (0.8.1)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
-    tilt (2.0.9)
+      tilt (>= 2.0.6, < 2.1)
+    sting (0.3.0)
+    temple (0.8.2)
+    tilt (2.0.10)
 
 PLATFORMS
   ruby
@@ -69,4 +67,4 @@ DEPENDENCIES
   sting
 
 BUNDLED WITH
-   2.0.1
+   2.0.2
