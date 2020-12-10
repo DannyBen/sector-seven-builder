@@ -9,7 +9,6 @@ version "0.1.0"
 output_folder 'site'
 root_folder 'src'
 markdown_folder 'src/data'
-scss_options cache: true, syntax: :scss, style: :compressed
 
 usage  "(b|build) [-HCJSA]"
 help   "Generate the site or parts of it"

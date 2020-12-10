@@ -10,8 +10,10 @@ emails and encrypt any text in place.
 - You will be prompted for a password, enter one.
 - Your text will be encrypted and pasted in place.
 - To decrypt, repeat the operation.
-- Note: The encrypted/decrypted text is also stored in the clipboard so you 
-  may paste it anywhere else.
+- You can choose to keep the encrypted/decrypted text in the clipboard or
+  not by ticking the Keep checkbox.
+- Additional options can be configered in the provided INI file.
+- You may hide the tray icon by setting `HideIcon=1` in the INI file.
 
 ## Technical Notes
 

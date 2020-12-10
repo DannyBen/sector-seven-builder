@@ -1,6 +1,6 @@
 name: Eclipse Portable Encryptor
 short_name: Eclipse
 summary: Encrypt emails and any text in place
-version: 0.25
-date: November 26, 2017
+version: 1.0
+date: December 10, 2020
 github: DannyBen/eclipse
