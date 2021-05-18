@@ -1,9 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    adsf (1.4.3)
+    adsf (1.4.6)
       rack (>= 1.0.0, < 3.0.0)
-    bobkit (0.2.0)
+    bobkit (0.2.1)
       coffee-script (~> 2.4)
       filewatcher (~> 1.1)
       i18n (~> 1.7)
@@ -17,24 +17,24 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     colsole (0.7.2)
-    concurrent-ruby (1.1.7)
+    concurrent-ruby (1.1.8)
     docopt (0.6.1)
-    execjs (2.7.0)
+    execjs (2.8.1)
     extended_yaml (0.2.1)
-    ffi (1.13.1)
+    ffi (1.15.0)
     filewatcher (1.1.1)
       optimist (~> 3.0)
-    i18n (1.8.5)
+    i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    libv8 (8.4.255.0)
-    mini_racer (0.3.1)
-      libv8 (~> 8.4.255)
+    libv8-node (15.14.0.1)
+    mini_racer (0.4.0)
+      libv8-node (~> 15.14.0.0)
     mister_bin (0.7.1)
       colsole (~> 0.5)
       docopt (~> 0.6)
-    nio4r (2.5.4)
+    nio4r (2.5.7)
     optimist (3.0.1)
-    puma (5.1.0)
+    puma (5.3.1)
       nio4r (~> 2.0)
     rack (2.2.3)
     rdiscount (2.2.0.2)
@@ -68,4 +68,4 @@ DEPENDENCIES
   sting
 
 BUNDLED WITH
-   2.1.4
+   2.2.16
