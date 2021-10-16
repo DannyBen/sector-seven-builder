@@ -21,7 +21,7 @@ GEM
     docopt (0.6.1)
     execjs (2.8.1)
     extended_yaml (0.2.1)
-    ffi (1.15.3)
+    ffi (1.15.4)
     filewatcher (1.1.1)
       optimist (~> 3.0)
     i18n (1.8.10)
@@ -32,14 +32,13 @@ GEM
     mister_bin (0.7.1)
       colsole (~> 0.5)
       docopt (~> 0.6)
-    nio4r (2.5.7)
+    nio4r (2.5.8)
     optimist (3.0.1)
-    puma (5.3.2)
+    puma (5.5.2)
       nio4r (~> 2.0)
     rack (2.2.3)
     rdiscount (2.2.0.2)
-    runfile (0.11.2)
-      colsole (~> 0.5)
+    runfile (0.12.0)
       docopt (~> 0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -68,4 +67,4 @@ DEPENDENCIES
   sting
 
 BUNDLED WITH
-   2.2.16
+   2.2.26
