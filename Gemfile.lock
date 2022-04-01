@@ -17,14 +17,14 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     colsole (0.7.2)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.1.10)
     docopt (0.6.1)
     execjs (2.8.1)
-    extended_yaml (0.2.1)
+    extended_yaml (0.2.3)
     ffi (1.15.5)
     filewatcher (1.1.1)
       optimist (~> 3.0)
-    i18n (1.9.1)
+    i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     libv8-node (16.10.0.0)
     mini_racer (0.6.2)
@@ -34,7 +34,7 @@ GEM
       docopt (~> 0.6)
     nio4r (2.5.8)
     optimist (3.0.1)
-    puma (5.6.2)
+    puma (5.6.4)
       nio4r (~> 2.0)
     rack (2.2.3)
     rdiscount (2.2.0.2)
@@ -67,4 +67,4 @@ DEPENDENCIES
   sting
 
 BUNDLED WITH
-   2.2.26
+   2.3.10
