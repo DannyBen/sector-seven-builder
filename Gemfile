@@ -9,5 +9,6 @@ gem "bobkit"
 gem "byebug"
 gem "puma", require: false
 gem "runfile", require: false
+gem "colsole"
 gem "sting"
 
