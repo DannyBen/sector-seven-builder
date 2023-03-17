@@ -37,7 +37,7 @@ GEM
     nio4r (2.5.8)
     puma (6.1.1)
       nio4r (~> 2.0)
-    rack (2.2.6.3)
+    rack (2.2.6.4)
     rdiscount (2.2.7)
     requires (1.0.1)
     runfile (1.0.1)
