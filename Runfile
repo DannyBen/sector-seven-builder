@@ -4,13 +4,13 @@ title   "Sector Seven"
 summary "Generate sector-seven.net"
 version "0.1.0"
 
-usage  "(b|build) [-HCJSA]"
-help   "Generate the site or parts of it"
-option "--html, -H", "Build HTML only"
-option "--css, -C", "Build CSS only"
-option "--assets, -A", "Copy assets only"
-option "--software, -S", "Copy software only"
-option "--js, -J", "Build javascripts only"
+usage  '(b|build) [-HCJSA]'
+help   'Generate the site or parts of it'
+option '--html, -H', 'Build HTML only'
+option '--css, -C', 'Build CSS only'
+option '--assets, -A', 'Copy assets only'
+option '--software, -S', 'Copy software only'
+option '--js, -J', 'Build javascripts only'
 action :b, :build do |args|
   all = !(args['--html'] or args['--css'] or args['--assets'] or args['--js'] or args['--software'])
   generator.build_html if all or args['--html']
@@ -21,7 +21,7 @@ action :b, :build do |args|
   generator.build_repo_assets if all
 end
 
-help   "Watch and build"
+help 'Watch and build'
 action :w, :watch do
   say "watching..."
   generator.watch 'src' do |events|
@@ -45,17 +45,22 @@ action :w, :watch do
   end
 end
 
-help   "Start development server"
+help 'Start development server'
 action :s, :server do
-  exec "rackup -p 3000 -o 0.0.0.0"
+  exec 'rackup -p 3000 -o 0.0.0.0'
 end
 
-help   "Deploy site by committing and pushing the site folder"
+help 'Deploy site by committing and pushing the site folder'
 action :d, :deploy do
-  say "deploying"
+  say 'deploying'
   Dir.chdir 'site' do
     system "git add . --all && git commit -am 'automatic deploy' && git push"
   end
+end
+
+help 'Run debug operation'
+action :debug do
+  p Software['tinyspeech'].description
 end
 
 helpers do

@@ -1,0 +1,6 @@
+name: TinySpeech Portable TTS
+short_name: TinySpeech
+summary: Speak selected text
+version: 0.1.1
+date: May 22, 2023
+github: DannyBen/TinySpeech

@@ -3,11 +3,17 @@ class Generator
   include Bobkit::Watcher
   include Colsole
 
-  def initialize
-    output_folder 'site'
-    root_folder 'src'
-    markdown_folder 'src/data'
+  class << self
+    include Bobkit::Tasks
+
+    def setup
+      output_folder 'site'
+      root_folder 'src'
+      markdown_folder 'src/data'
+    end
   end
+
+  def initialize = self.class.setup
 
   def build_html
     say 'rendering html ... '
@@ -37,13 +43,13 @@ class Generator
         output: "software/rpg/tutorials/#{key}", software: rpg, selected: data
     end
 
-    say 'g`done`'
+    say 'g`rendered html`', replace: true
   end
 
   def build_css
     say 'compiling css ... '
     compile_css 'site', output: 'style'
-    say 'g`done`'
+    say 'g`compiled css`', replace: true
   end
 
   def build_assets
@@ -51,20 +57,20 @@ class Generator
     copy_asset 'images'
     copy_asset 'icons'
     copy_folder 'src/assets/root', output_folder
-    say 'g`done`'
+    say 'g`copied assets`', replace: true
   end
 
   def build_software
     say 'copying software ... '
     copy_asset 'downloads'
     copy_asset 'rpg-samples'
-    say 'g`done`'
+    say 'g`copied software`', replace: true
   end
 
   def build_js
     say 'compiling javascripts ... '
     compile_js 'site', output: 'site'
-    say 'g`done`'
+    say 'g`compiled javascripts`', replace: true
   end
 
   def build_repo_assets

@@ -1,53 +1,36 @@
 class Software
-  class << self
-    def index
-      @index || YAML.load_file('src/data/software/index.yml').map(&:to_sym)
-    end
+  include Bobkit::Tasks
 
-    def all
-      index.map { |id| new id }
-    end
+  class << self
+    def index = @index || YAML.load_file('src/data/software/index.yml').map(&:to_sym)
+    def all = index.map { |id| new id }
+    def [](id) = new id
   end
 
   attr_reader :id
 
   def initialize(id)
     @id = id
+    Generator.setup
   end
 
-  def method_missing(method, *)
-    properties[method]
+  def method_missing(method, *) = properties[method]
+  def respond_to_missing?(*) = true
+  def data_dir = "src/data/software/#{id}"
+  def meta_file = "#{data_dir}/meta.yml"
+  def description_file = "#{data_dir}/description.md"
+  def screenshot_path = "/assets/images/screenshots/#{id}.png"
+  def download = "/assets/downloads/#{id}.zip"
+  
+  def screenshot
+    @screenshot ||= File.exist?("src/#{screenshot_path}") ? screenshot_path : nil
   end
-
-  def respond_to_missing?(*)
-    true
-  end
-
-  def properties
-    @properties ||= YAML.load_file(meta_file).transform_keys(&:to_sym)
-  end
-
-  def data_dir
-    "src/data/software/#{id}"
-  end
-
-  def meta_file
-    "#{data_dir}/meta.yml"
-  end
-
-  def description_file
-    "#{data_dir}/description.md"
-  end
-
+  
   def description
     @description ||= markdown "software/#{id}/description" if File.exist? description_file
   end
-
-  def screenshot
-    "/assets/images/screenshots/#{id}.png"
-  end
-
-  def download
-    "/assets/downloads/#{id}.zip"
+  
+  def properties
+    @properties ||= YAML.load_file(meta_file).transform_keys(&:to_sym)
   end
 end
