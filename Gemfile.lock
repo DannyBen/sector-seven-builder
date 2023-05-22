@@ -1,8 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    adsf (1.4.6)
-      rack (>= 1.0.0, < 3.0.0)
+    adsf (1.4.7)
+      rack (>= 1.0.0, < 4.0.0)
+      rackup (~> 2.1)
     bobkit (0.2.2)
       coffee-script (~> 2.4)
       filewatcher (~> 2.0)
@@ -25,7 +26,7 @@ GEM
     filewatcher (2.1.0)
       module_methods (~> 0.1.0)
     gtx (0.1.0)
-    i18n (1.12.0)
+    i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     libv8-node (16.10.0.0-x86_64-linux)
     mini_racer (0.6.3)
@@ -34,15 +35,18 @@ GEM
       colsole (>= 0.8.1, < 2)
       docopt_ng (~> 0.7, >= 0.7.1)
     module_methods (0.1.0)
-    nio4r (2.5.8)
-    puma (6.1.1)
+    nio4r (2.5.9)
+    puma (6.2.2)
       nio4r (~> 2.0)
-    rack (2.2.6.4)
+    rack (3.0.7)
+    rackup (2.1.0)
+      rack (>= 3)
+      webrick (~> 1.8)
     rdiscount (2.2.7)
     requires (1.0.1)
     runfile (1.0.1)
       colsole (>= 0.8.2, < 2.0)
-      docopt_ng (~> 0.7)
+      docopt_ng (~> 0.7, >= 0.7.1)
       gtx (~> 0.1)
       requires (>= 0.2, < 2.0)
     sassc (2.4.0)
@@ -59,6 +63,7 @@ GEM
       extended_yaml (~> 0.2)
     temple (0.8.2)
     tilt (2.0.11)
+    webrick (1.8.1)
 
 PLATFORMS
   x86_64-linux
