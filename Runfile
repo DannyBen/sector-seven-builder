@@ -1,53 +1,47 @@
 require_relative 'app/boot'
-include Bobkit::Tasks
-include Bobkit::Watcher
-include Colsole
 
 title   "Sector Seven"
 summary "Generate sector-seven.net"
 version "0.1.0"
 
-output_folder 'site'
-root_folder 'src'
-markdown_folder 'src/data'
-
 usage  "(b|build) [-HCJSA]"
 help   "Generate the site or parts of it"
-option "-H, --html", "Build HTML only"
-option "-C, --css", "Build CSS only"
-option "-A, --assets", "Copy assets only"
-option "-S, --software", "Copy software only"
-option "-J, --js", "Build javascripts only"
+option "--html, -H", "Build HTML only"
+option "--css, -C", "Build CSS only"
+option "--assets, -A", "Copy assets only"
+option "--software, -S", "Copy software only"
+option "--js, -J", "Build javascripts only"
 action :b, :build do |args|
   all = !(args['--html'] or args['--css'] or args['--assets'] or args['--js'] or args['--software'])
-  build_html if all or args['--html']
-  build_css if all or args['--css']
-  build_assets if all or args['--assets']
-  build_software if all or args['--software']
-  build_js if all or args['--js']
-  build_repo_assets if all
-rescue => e
-  say "!txtred!ERROR\n#{e.class} !txtpur!#{e.message}"
-  say "in #{e.backtrace[0]}"
+  generator.build_html if all or args['--html']
+  generator.build_css if all or args['--css']
+  generator.build_assets if all or args['--assets']
+  generator.build_software if all or args['--software']
+  generator.build_js if all or args['--js']
+  generator.build_repo_assets if all
 end
 
 help   "Watch and build"
 action :w, :watch do
-  say "watching"
-  watch 'src' do |filename, event|
-    say "#{event} !txtgrn!#{File.basename filename}"
-    ext = File.extname(filename)[1..-1]
+  say "watching..."
+  generator.watch 'src' do |events|
+    flags = {}
+    events.each do |filename, event|
+      say "file: g`#{File.basename filename}`, event: b`#{event}`"
+      ext = File.extname(filename)[1..-1]
     
-    case ext
-    when 'slim', 'md', 'yml'
-      execute 'build --html'
-    when 'scss'
-      execute 'build --css'
-    when 'coffee'
-      execute 'build --js'
-    else
-      execute 'build --assets'
+      flag = case ext
+      when 'slim', 'md', 'yml' then '--html'
+      when 'scss'              then '--css'
+      when 'coffee'            then '--js'
+      else                          '--assets'
+      end
+
+      flags[flag] = true
     end
+
+    flags = flags.keys.join ' '
+    system "run build #{flags}"
   end
 end
 
@@ -64,68 +58,6 @@ action :d, :deploy do
   end
 end
 
-def build_html
-  say "rendering html ... "
-
-  softwares = Software.all
-
-  render 'index', layout: 'default', output: 'index', softwares: softwares
-  render 'shared/redirect', output: 'software/index'
-  
-  softwares.each do |software|
-    render 'software/show', layout: 'default', 
-      output: "software/#{software.id}", software: software
-  end
-
-  render 'software/fileblender/info', layout: 'default', 
-    output: 'software/fileblender/info', software: Software.new(:fileblender)
-
-  render 'software/rpg/samples', layout: 'default', 
-    output: 'software/rpg/samples', software: Software.new(:rpg)
-
-  rpg = Software.new(:rpg)
-  render 'software/rpg/tutorials', layout: 'default', 
-    output: 'software/rpg/tutorials', software: rpg, selected: nil
-
-  rpg.videos.each do |key, data|
-    render 'software/rpg/tutorials', layout: 'default', 
-      output: "software/rpg/tutorials/#{key}", software: rpg, selected: data
-  end
-  
-  say "!txtgrn!done"
-end
-
-def build_css
-  say "compiling css ... "
-  compile_css 'site', output: 'style'
-  say "!txtgrn!done"
-end
-
-def build_assets
-  say "copying assets ... "
-  copy_asset "images"
-  copy_asset "icons"
-  copy_folder 'src/assets/root', output_folder
-  say "!txtgrn!done"
-end
-
-def build_software
-  say "copying software ... "
-  copy_asset "downloads"
-  copy_asset "rpg-samples"
-  say "!txtgrn!done"
-end
-
-def build_js
-  say "compiling javascripts ... "
-  compile_js 'site', output: 'site'
-  say "!txtgrn!done"
-end
-
-def build_repo_assets
-  copy_file 'README.md', "#{output_folder}/README.md"
-end
-
-action :debug do
-  byebug
+helpers do
+  def generator = @generator ||= Generator.new
 end

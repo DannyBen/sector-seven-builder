@@ -1,0 +1,11 @@
+require:
+  - rubocop-performance
+
+inherit_gem:
+  rentacop:
+    - rentacop.yml
+
+AllCops:
+  TargetRubyVersion: 3.1
+  Exclude:
+    - site/**/*

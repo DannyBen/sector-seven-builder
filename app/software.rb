@@ -15,8 +15,12 @@ class Software
     @id = id
   end
 
-  def method_missing(method, *args, &block)
+  def method_missing(method, *)
     properties[method]
+  end
+
+  def respond_to_missing?(*)
+    true
   end
 
   def properties
@@ -35,7 +39,7 @@ class Software
     "#{data_dir}/description.md"
   end
 
-  def description    
+  def description
     @description ||= markdown "software/#{id}/description" if File.exist? description_file
   end
 
