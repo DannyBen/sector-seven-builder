@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    adsf (1.4.7)
+    adsf (1.5.0)
       rack (>= 1.0.0, < 4.0.0)
       rackup (~> 2.1)
     bobkit (0.2.2)
@@ -20,9 +20,9 @@ GEM
     colsole (1.0.0)
     concurrent-ruby (1.2.2)
     docopt_ng (0.7.1)
-    execjs (2.8.1)
+    execjs (2.9.1)
     extended_yaml (0.2.3)
-    ffi (1.15.5)
+    ffi (1.16.3)
     filewatcher (2.1.0)
       module_methods (~> 0.1.0)
     gtx (0.1.0)
@@ -35,18 +35,18 @@ GEM
       colsole (>= 0.8.1, < 2)
       docopt_ng (~> 0.7, >= 0.7.1)
     module_methods (0.1.0)
-    nio4r (2.5.9)
-    puma (6.3.1)
+    nio4r (2.7.0)
+    puma (6.4.2)
       nio4r (~> 2.0)
     rack (3.0.8)
     rackup (2.1.0)
       rack (>= 3)
       webrick (~> 1.8)
-    rdiscount (2.2.7.1)
+    rdiscount (2.2.7.3)
     requires (1.0.1)
-    runfile (1.0.1)
+    runfile (1.0.2)
       colsole (>= 0.8.2, < 2.0)
-      docopt_ng (~> 0.7)
+      docopt_ng (~> 0.7, >= 0.7.1)
       gtx (~> 0.1)
       requires (>= 0.2, < 2.0)
     sassc (2.4.0)
@@ -78,4 +78,4 @@ DEPENDENCIES
   sting
 
 BUNDLED WITH
-   2.4.18
+   2.5.3
