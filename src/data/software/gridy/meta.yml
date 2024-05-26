@@ -1,6 +1,6 @@
 name: Gridy Windows Snapper
 short_name: Gridy
 summary: Snap Windows to Grid + Always on Topper
-version: 0.70
-date: November 22, 2015
+version: "0.71"
+date: May 26, 2024
 github: DannyBen/Gridy

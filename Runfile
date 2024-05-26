@@ -4,7 +4,7 @@ title   "Sector Seven"
 summary "Generate sector-seven.net"
 version "0.1.0"
 
-usage  '(b|build) [-HCJSA]'
+usage  '(b | build) [-HCJSA]'
 help   'Generate the site or parts of it'
 option '--html, -H', 'Build HTML only'
 option '--css, -C', 'Build CSS only'

@@ -26,19 +26,19 @@ GEM
     filewatcher (2.1.0)
       module_methods (~> 0.1.0)
     gtx (0.1.0)
-    i18n (1.14.1)
+    i18n (1.14.5)
       concurrent-ruby (~> 1.0)
-    libv8-node (18.16.0.0-x86_64-linux)
-    mini_racer (0.8.0)
-      libv8-node (~> 18.16.0.0)
+    libv8-node (21.7.2.0-x86_64-linux)
+    mini_racer (0.12.0)
+      libv8-node (~> 21.7.2.0)
     mister_bin (0.7.6)
       colsole (>= 0.8.1, < 2)
       docopt_ng (~> 0.7, >= 0.7.1)
     module_methods (0.1.0)
-    nio4r (2.7.0)
+    nio4r (2.7.3)
     puma (6.4.2)
       nio4r (~> 2.0)
-    rack (3.0.9.1)
+    rack (3.0.11)
     rackup (2.1.0)
       rack (>= 3)
       webrick (~> 1.8)
@@ -78,4 +78,4 @@ DEPENDENCIES
   sting
 
 BUNDLED WITH
-   2.5.6
+   2.5.7
