@@ -1,3 +1,9 @@
+> DEPRECATED:
+> This repository is deprecated
+> See https://github.com/DannyBen/sector-seven.com
+
+---
+
 Sector Seven Site
 ==================================================
 
